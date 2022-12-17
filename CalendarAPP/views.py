@@ -28,11 +28,11 @@ def user(request):
             if current_date.month < input_date.month or (
                     current_date.month == input_date.month and current_date.day < input_date.day):
                 years_passed -= 1
-            years_passed = f"{years_passed}, Years Passed After {first_name}'s Birth "
-            first_name = f'First Name: {first_name.capitalize()}'
-            last_name = f'Last Name: {last_name.capitalize()}'
+                years_passed = f"{years_passed}, Years Passed After {first_name}'s Birth "
+                first_name = f'First Name: {first_name.capitalize()}'
+                last_name = f'Last Name: {last_name.capitalize()}'
 
-            return render(request, 'user.html', {'form': form, 'years_passed': years_passed,
+                return render(request, 'user.html', {'form': form, 'years_passed': years_passed,
                                                  'first_name': first_name,
                                                  'last_name': last_name})
 
