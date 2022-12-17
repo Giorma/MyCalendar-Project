@@ -1,0 +1,32 @@
+{% extends './user_base.html' %}
+{% block content%}
+    <center>
+
+    <div class="h-50 d-inline-block" style="width: 400px; ">
+        <div class="h4 pb-2 mb-4 text-success border-secondary">
+            <div class="shadow p-4 mb-5 bg-body rounded">
+                <br/>
+                <form method="post" class="mb-4">
+                    {% csrf_token %}
+                    <div class="shadow p-3 mb-5 bg-body rounded">
+                        <p class="fs-2 text-danger-bg.gradient">Please Fill out Fields</p>
+                        <input class=" form-control border border-success " type="text" name="first_name" placeholder="First Name" required>
+                        <br/>
+                        <input class=" form-control border border-success" type="text" name="last_name" placeholder="Last Name" required>
+                        <br/>
+                        <input class=" form-control border border-success" type="date" name="date"  required>
+                        <br/><br/>
+                        <button class=" form-control border border-success" type="submit">Submit</button>
+                        <br/>
+                    </div>
+                </form>
+                <div class="d-inline p-2 text-info-gradient">
+                    <p class="fs-2">{{ first_name }}</p>
+                    <p class="fs-2">{{ last_name }}</p>
+                    <p class="fs-2">{{ years_passed}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </center>
+{%endblock%}
