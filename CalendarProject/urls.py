@@ -21,6 +21,5 @@ from django.conf.urls.static import static
 urlpatterns =[
     path('admin/', admin.site.urls),
     path('Calendar/', include('CalendarAPP.urls')),
-    path('User/', include('CalendarAPP.urls'))
 
 ]
